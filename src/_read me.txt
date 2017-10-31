@@ -1,0 +1,65 @@
+
+1.paki run muna ung usbserver 
+2.open any browser (google chrome, firefox, etc)
+3.localhost:8080/product.php  (para mabuksan ung file) (nasa root na folder ang lahat ng files)
+
+
+<-------------------------------------------->
+
+para mabuksan ung structure ng database (databasename bae2 )
+
+localhost:8080/phpmyadmin/
+
+<---------------------------------------------->
+
+features
+
+done
+add, edit, delete, search
+product,supplier,type(main),subtype,product by subtype
+
+account : login, username, pass (wag na muna)
+
+wala pa
+report(output)
+notifications
+calendar
+
+
+<-------------------------------------------------->
+<database>
+
+Product
+product_id
+product_code
+name 
+description
+product_subtype_id
+price
+available_stocks
+
+
+Product_type
+product_type_id
+name 
+description
+
+Product_subtype
+product_subtype_id
+named
+description
+product_type_id
+
+account
+user_id
+username
+password
+name
+
+supplier
+supplier_id
+supplier_name
+supplier_description
+supplier_address
+supplier_contact
+
