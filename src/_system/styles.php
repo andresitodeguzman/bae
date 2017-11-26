@@ -4,6 +4,7 @@ Styles
 */
 ?>
 <!-- Metadata -->
+	<meta name="theme-color" content="#b71c1c">
 	<link rel="icon" type="images/jpg" href="/pics/b.jpg">
 	<link rel="shortcut icon" type="images/jpg" href="/pics/b.jpg" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>

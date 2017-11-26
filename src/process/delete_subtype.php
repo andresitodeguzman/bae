@@ -21,6 +21,7 @@ $query = "DELETE FROM product_subtype WHERE product_subtype_id='$product_subtype
 // Query
 $mysqli->query($query)  or die($mysqli->error());
 
+
 // Redirect
 header("Location: " . $_SERVER['HTTP_REFERER']);
 

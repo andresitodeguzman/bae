@@ -20,7 +20,7 @@ $pdf = new FPDF('P','mm','Letter');
 
 $pdf->setTitle("Product");
 $pdf->addPage();
-$pdf->setMargins(20,0,20);
+$pdf->setMargins(20,20,20);
 
 $pdf->Image('../pics/b.jpg',100,10,20);
 
@@ -58,14 +58,14 @@ foreach($types_array as $type){
 
 			$c_y = $pdf->getY();
 			$pdf->setXY(10,$c_y+5);
-			$pdf->setFont('Arial','',10);
-			$pdf->SetFillColor(46,139,87);
-			$pdf->SetTextColor(255,255,255);
+			$pdf->setFont('Arial','',9);
+			$pdf->SetFillColor(240,225,48);
+			$pdf->SetTextColor(0,0,0);
 
 			$pdf->Cell(10,5, 'ID',1,0,'C','true');
-			$pdf->Cell(30,5, 'Code',1,0,'C','true');
-			$pdf->Cell(50,5, 'Name',1,0,'C','true');
-			$pdf->Cell(60,5, 'Description',1,0,'C','true');
+			$pdf->Cell(40,5, 'Code',1,0,'C','true');
+			$pdf->Cell(65,5, 'Name',1,0,'C','true');
+			$pdf->Cell(30,5, 'Description',1,0,'C','true');
 			$pdf->Cell(25,5, 'Price',1,0,'C','true');
 			$pdf->Cell(20,5, 'Av. Stocks',1,0,'C','true');
 
@@ -89,9 +89,9 @@ foreach($types_array as $type){
 					$pdf->setXY(10,$c_y+5);
 
 					$pdf->Cell(10,5, $product_id,1,0,'C','true');
-					$pdf->Cell(30,5, $product_code,1,0,'C','true');
-					$pdf->Cell(50,5, $product_name,1,0,'C','true');
-					$pdf->Cell(60,5, $product_description,1,0,'C','true');
+					$pdf->Cell(40,5, $product_code,1,0,'C','true');
+					$pdf->Cell(65,5, $product_name,1,0,'C','true');
+					$pdf->Cell(30,5, $product_description,1,0,'C','true');
 					$pdf->Cell(25,5, $product_price,1,0,'C','true');
 					$pdf->Cell(20,5, $product_available_stocks,1,0,'C','true');
 

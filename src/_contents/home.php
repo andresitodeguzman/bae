@@ -13,7 +13,7 @@
  <center>
   <div class="mySlides fade">
 
-    <img class="w3-animate-top" src="pics/b.jpg" width="100%" height="500px"/>
+    <img class="w3-animate-top" src="pics/b.jpg" width="100%"/>
     <div class="w3-panel w3-red w3-round-large">
 	<center><h3><div class="text">Welcome</div><h3></center>
 	</div>
@@ -21,7 +21,7 @@
   
   <div class="mySlides fade">
  
-    <img  class="w3-animate-zoom" src="pics/b1.jpg" width="100%" height="500px"/>
+    <img  class="w3-animate-zoom" src="pics/b1.jpg" width="100%"/>
 	<div class="w3-panel w3-red w3-round-large ">
     <center><h3><div class="text">B.A.E (Glass and Aluminum Supply)</div><h3></center>
 	</div>
@@ -29,7 +29,7 @@
 
   <div class="mySlides fade">
    
-    <img class="w3-animate-zoom" src="pics/b2.jpg" width="100%" height="500px"/>
+    <img class="w3-animate-zoom" src="pics/b2.jpg" width="100%"/>
     <div class="w3-panel w3-red w3-round-large">
 	<center><h3><div class="text">Ready to Serve</div></h3></center>
 	</div>
@@ -54,7 +54,7 @@
 				CONTACT
 			</div>
 			
-			<h1><strong>B.A.E</strong></h1>
+			<h3><strong>B.A.E</strong></h3>
 			
 	<div class="w3-display-container w3-hover-opacity " style="width:50%">
 			<img src="pics/call.png" alt="Avatar" style="width:100%">
@@ -80,7 +80,7 @@
 				LOCATION
 			</div>
 			
-			<h1><strong>B.A.E</strong></h1>
+			<h3><strong>B.A.E</strong></h3>
 			
 			<div class="w3-display-container w3-hover-opacity " style="width:50%">
     <img src="pics/location.png" alt="Avatar" style="width:100%">
@@ -100,7 +100,7 @@
 				WEBSITE
 			</div>
 			
-			<h1><strong>B.A.E</strong></h1>
+			<h3><strong>B.A.E</strong></h3>
 			
 			<div class="w3-display-container w3-hover-opacity " style="width:50%">
     <img src="pics/fb.png" alt="Avatar" style="width:100%">

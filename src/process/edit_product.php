@@ -35,6 +35,18 @@ $query = "UPDATE product SET product_code='$product_code', name='$name', descrip
 // Query
 $mysqli->query($query) or die($mysqli->error());
 
+/* Notifications */
+
+// Check if empty available stock
+if(@empty($available_stocks)){
+	$notif_title = "$name ($product_code) needs re-stocking!";
+	$notif_description = "$name is out of stock in your inventory. Please re-order as soon as possible.";
+	$notif_url = "/product.php?q=$product_code&by=product_code";
+
+	include("_action/notification.php");
+}
+
+
 // Echo Response
 echo "$name edited successfully!"; 
 

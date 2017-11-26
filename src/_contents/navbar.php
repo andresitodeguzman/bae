@@ -8,7 +8,17 @@
 			<b><?php echo $site_name;?></b> <?php echo $activity_title; ?>
 		</a> 
 	</div>
-	
+	<div class="right">
+		<?php
+		if(@$_SESSION['signed_in']){
+			echo '
+				<a href="#notification" class="modal-trigger" onclick="notification();">
+					<i class="material-icons">notifications</i>
+				</a>
+			';
+		}
+		?>
+	</div>
 </nav>
 <!-- Side Nav -->
 <ul id="slide-out" class="side-nav">
@@ -32,6 +42,11 @@
 	<li>
 		<a href='calendar.php'>
 			<i class='material-icons'>info</i> Calendar
+		</a>
+	</li>
+	<li>
+		<a href='edit_account.php'>
+			<i class='material-icons'>edit</i> Edit Account
 		</a>
 	</li>
 	<li>
@@ -94,3 +109,31 @@
 	</li>
 </ul>
 <!-- .Side Nav -->
+
+<div class="modal modal-fixed-footer" id="notification">
+	<div class="modal-content">
+		<h3 class="grey-text">Notifications</h3><br>
+		<div class="notification-content"></div>
+	</div>
+	<div class="modal-footer">
+		<a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+	</div>
+</div>
+<script type="text/javascript">
+function notification(){
+	$.ajax({
+		type:'GET',
+		cache: false,
+		url: '_preprocess/notification.php',
+		data: {
+			do: 'a'
+		},
+		success: function(result){
+			$(".notification-content").html(result);
+		}
+	}).fail(function(){
+		let error = "<center><h4 class='grey-text'>Error Loading Notifications</h4></center>";
+		$(".notification-content").html(error);
+	});
+}
+</script>
