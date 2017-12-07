@@ -84,7 +84,7 @@ include("_prepare/products.php");
 					}
 				}
 			?>
-				<tr>
+				<tr id="#entry<?php echo $product['product_id']; ?>">
 					<td>
 						<?php echo $product['product_id']; ?>
 					</td>
@@ -159,7 +159,6 @@ include("_prepare/products.php");
 					</div>
 				</div>
 				<script type="text/javascript">
-					//	abc
 					function editProduct<?php echo $product['product_id']; ?>(){
 						var c<?php echo $product['product_id']; ?> = $("#codeField<?php echo $product['product_id']; ?>").val();
 						var n<?php echo $product['product_id']; ?> = $("#nameField<?php echo $product['product_id']; ?>").val();
@@ -190,7 +189,9 @@ include("_prepare/products.php");
 											available_stocks: a<?php echo $product['product_id'];?>,
 										},
 										success: function(result){
-											Materialize.toast(result,3000);
+											Materialize.toast(result,3000,'',function(){
+												location.reload();
+											});
 										}
 									}).fail(function(){
 										Materialize.toast("An Error Occurred",3000);
@@ -286,7 +287,9 @@ function addProduct(){
 			$("#productSubtype").val("");
 			$("#productPrice").val("");
 			$("#productAvailable").val("");
-			Materialize.toast(result,3000);
+			Materialize.toast(result,3000,'',function(){
+				location.reload();
+			});
 		}
 		
 	}).fail(function(){

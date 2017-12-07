@@ -3,6 +3,10 @@
 Connection
 */
 
+// Set Correct Timezone
+$tzone = "Asia/Manila";
+date_default_timezone_set($tzone);
+
 // Define
 $sql_host = "localhost:3307";
 $sql_username = "root";
